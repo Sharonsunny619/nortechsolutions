@@ -115,7 +115,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Networking}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -183,7 +183,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Security}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -221,7 +221,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Communication}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -259,7 +259,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={ITSupport}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -327,7 +327,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={AudioVisual}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -372,7 +372,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={ManagedIT}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -422,7 +422,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={AMC}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -460,7 +460,7 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Development}
         alt="Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),
@@ -504,7 +504,7 @@ export const servicesData = [
         className="object-cover cursor-pointer active:scale-110 transition duration-400"
         src={DigitalMarketing}
         alt="Digital Marketing Services"
-        loading="lazy"
+        loading="eager"
         sizes="(max-width: 768px) 0px, 550px"
       />
     ),

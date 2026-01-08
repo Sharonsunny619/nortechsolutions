@@ -1,5 +1,5 @@
 "use client";
-import  { useEffect, useState, useRef } from "react";
+import  { useEffect, useState, useRef, type ReactElement } from "react";
 import { servicesData } from "./data";
 import { Roboto } from "next/font/google";
 import { gsap } from "gsap";
@@ -53,8 +53,35 @@ export default function Services() {
     }
   }, [activeId]);
 
-  // Preload first service images on mount
+  // Preload all service icons on mount for instant switching
   useEffect(() => {
+    const preloadServiceIcon = (iconElement: ReactElement) => {
+      try {
+        const props = (iconElement as ReactElement<{ src?: string | StaticImageData }>)?.props;
+        if (props && props.src) {
+          const src = typeof props.src === 'string' 
+            ? props.src 
+            : (props.src as StaticImageData)?.src;
+          if (src && !preloadedImages.current.has(src)) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
+            preloadedImages.current.add(src);
+          }
+        }
+      } catch {
+        // Silently fail if icon structure is unexpected
+      }
+    };
+
+    // Preload all service icons
+    servicesData.forEach((service) => {
+      preloadServiceIcon(service.icon as ReactElement);
+    });
+
+    // Preload first service hover images
     const firstService = servicesData[0];
     if (firstService) {
       firstService.points.slice(0, 2).forEach((point) => {

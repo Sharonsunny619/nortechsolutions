@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex items-center gap-4">
           <div className="relative h-12 w-12">
             <Image
-              src="/NortechIcon.png"
+              src="/nortechicon.png"
               alt="Nortech Solutions"
               fill
               className="object-contain"

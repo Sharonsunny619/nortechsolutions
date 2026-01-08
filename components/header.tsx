@@ -96,7 +96,7 @@ export function SiteHeader() {
             className="flex items-center gap-2"
           >
             <Image
-              src="/NortechIcon.png"
+              src="/nortechicon.png"
               alt="Nortech Solutions"
               width={10}
               height={10}
@@ -142,7 +142,7 @@ export function SiteHeader() {
         <div className="md:hidden flex">
           <Link href="/" className="flex items-center gap-2">
             <Image
-              src="/NortechIcon.png"
+              src="/nortechicon.png"
               alt="Nortech Solutions"
               width={24}
               height={24}
