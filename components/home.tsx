@@ -104,6 +104,7 @@ export default function HomePage() {
               height={120}
               className="h-[60px] w-[60px] min-[380px]:h-[65px] min-[380px]:w-[65px] min-[550px]:h-[80px] min-[550px]:w-[80px] min-[768px]:h-[120px] min-[768px]:w-[120px] z-50"
               priority
+              sizes="(max-width: 380px) 60px, (max-width: 550px) 65px, (max-width: 768px) 80px, 120px"
             />
           </div>
 

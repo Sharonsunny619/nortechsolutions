@@ -19,6 +19,59 @@ export default function Services() {
     description: string;
   } | null>(null);
   const descriptionRef = useRef<HTMLDivElement>(null);
+  const preloadedImages = useRef<Set<string>>(new Set());
+
+  // Preload images for the active service and nearby services
+  useEffect(() => {
+    const preloadImage = (imageSrc: StaticImageData | string) => {
+      if (!imageSrc) return;
+      const src = typeof imageSrc === 'string' ? imageSrc : (imageSrc as StaticImageData).src;
+      if (preloadedImages.current.has(src)) return;
+      
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.as = 'image';
+      link.href = src;
+      document.head.appendChild(link);
+      preloadedImages.current.add(src);
+    };
+
+    // Preload images for active service and next service
+    const activeService = servicesData.find((s) => s.id === activeId);
+    const nextService = servicesData.find((s) => s.id === activeId + 1);
+    
+    if (activeService) {
+      activeService.points.forEach((point) => {
+        if (point.image) preloadImage(point.image);
+      });
+    }
+    
+    if (nextService) {
+      nextService.points.forEach((point) => {
+        if (point.image) preloadImage(point.image);
+      });
+    }
+  }, [activeId]);
+
+  // Preload first service images on mount
+  useEffect(() => {
+    const firstService = servicesData[0];
+    if (firstService) {
+      firstService.points.slice(0, 2).forEach((point) => {
+        if (point.image) {
+          const src = typeof point.image === 'string' ? point.image : point.image.src;
+          if (!preloadedImages.current.has(src)) {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'image';
+            link.href = src;
+            document.head.appendChild(link);
+            preloadedImages.current.add(src);
+          }
+        }
+      });
+    }
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -183,6 +236,8 @@ export default function Services() {
               alt="Service point"
               fill
               className="object-cover"
+              sizes="350px"
+              loading="eager"
             />
           </div>
         )}

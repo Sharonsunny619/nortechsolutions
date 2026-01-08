@@ -21,6 +21,36 @@ import ElvWorks from "./images/security and surveillance/elvworks.png";
 import BarrierGate from "./images/security and surveillance/barrier.png";
 import Fare from "./images/security and surveillance/fare.png";
 import Cloud from "./images/security and surveillance/cloud.png";
+import WifiNetwork from "./images/communication_and_connectivity/wifi_network.png";
+import IPSolutions from "./images/communication_and_connectivity/ip_telephony.png";
+import ThreecxSolutions from "./images/communication_and_connectivity/3cx_solutions.png";
+import Laptops from "./images/supply hardware/laptops.png";
+import Mobiles from "./images/supply hardware/mobiles.png";
+import Consumables from "./images/supply hardware/consumables.png";
+import AVAutomation from "./images/audio visual/avautomation.jpeg";
+import BoardRoom from "./images/audio visual/boardroom.jpeg";
+import DigitalSignage from "./images/audio visual/digital_signage.jpeg";
+import DisplaySystem from "./images/audio visual/displaysystem.jpeg";
+import InteractiveBoard from "./images/audio visual/interactiveboard.jpeg";
+import Multizone from "./images/audio visual/multizone.jpeg";
+import VideoConference from "./images/audio visual/videoconference.jpeg";
+import VideoMatrix from "./images/audio visual/videomatrix.jpeg";
+import DedicatedOnsite from "./images/managed it services/dedicatedonsite.jpeg";
+import EmergencyOnCall from "./images/managed it services/emergencyoncall.jpeg";
+import ProActive from "./images/managed it services/proactive.jpeg";
+import Strategic from "./images/managed it services/strategicict.jpeg";
+import Preventive from "./images/annual maintenance/preventive.jpeg";
+import Priority from "./images/annual maintenance/priority.jpeg";
+import TwentyFourSeven from "./images/annual maintenance/24:7.jpeg";
+import OnSite from "./images/annual maintenance/onsite.jpeg";
+import Replacement from "./images/annual maintenance/replacement.jpeg";
+import Frontend from "./images/web development/frontend.jpeg";
+import Backend from "./images/web development/backend.jpeg";
+import Maintenence from "./images/web development/maintenance.jpeg";
+import SEO from "./images/Digital marketing/seo.jpeg";
+import SocialMedia from "./images/Digital marketing/socialmedia.jpeg";
+import Email from "./images/Digital marketing/email.jpeg";
+import Paid from "./images/Digital marketing/paid.jpeg";
 
 export const nav = [
   {
@@ -85,6 +115,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Networking}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -151,6 +183,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Security}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -165,19 +199,19 @@ export const servicesData = [
         title: "Wi-Fi Network Installation",
         description:
           "High-speed, secure wireless connectivity tailored for offices, campuses, and commercial spaces.",
-        image: Communication,
+        image: WifiNetwork,
       },
       {
         title: "IP Telephony & PABX Systems",
         description:
           "VoIP-based communication platforms with call routing, voicemail-to-email, conferencing, and mobile integration.",
-        image: Communication,
+        image: IPSolutions,
       },
       {
         title: "3CX Solutions",
         description:
           "Advanced 3CX phone system solutions enabling flexible VoIP communication, remote work support, video calls, and seamless CRM integration.",
-        image: Communication,
+        image: ThreecxSolutions,
       },
     ],
     icon: (
@@ -187,6 +221,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Communication}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -201,19 +237,19 @@ export const servicesData = [
         title: "Sales of Laptops, Desktops, Workstations & Servers",
         description:
           "We supply high-performance computing devices from top brands like Dell, HP, Lenovo, and Apple, tailored for your business needs.",
-        image: ITSupport,
+        image: Laptops,
       },
       {
         title: "Sales of Mobiles & Tablets",
         description:
           "Stay connected with the latest smartphones and tablets from Apple, Samsung, Huawei, and more—ideal for mobile teams, executives, and field operations.",
-        image: ITSupport,
+        image: Mobiles,
       },
       {
         title: "Toners & Consumables",
         description:
           "Genuine cartridges and consumables for all major brands including HP, Canon, Epson, and Brother.",
-        image: ITSupport,
+        image: Consumables,
       },
     ],
     icon: (
@@ -223,6 +259,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={ITSupport}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -237,49 +275,49 @@ export const servicesData = [
         title: "Boardroom & Meeting Room Systems",
         description:
           "Smart displays, wireless presentation tools, and integrated control panels for smooth, professional meetings.",
-        image: AudioVisual,
+        image: BoardRoom,
       },
       {
         title: "Video Conferencing Solutions",
         description:
           "HD cameras, microphones, and conferencing platforms for clear, reliable remote collaboration.",
-        image: AudioVisual,
+        image: VideoConference,
       },
       {
         title: "Digital Signage & Content Displays",
         description:
           "Smart displays and content management systems for dynamic advertising, information sharing, and branding.",
-        image: AudioVisual,
+        image: DigitalSignage,
       },
       {
         title: "Interactive Whiteboards & Smart Panels",
         description:
           "Touch-enabled displays for training, education, and brainstorming—boosting engagement and productivity.",
-        image: AudioVisual,
+        image: InteractiveBoard,
       },
       {
         title: "Multi-Zone Audio Systems",
         description:
           "Background music, paging, and public address systems tailored for offices, malls, and event venues.",
-        image: AudioVisual,
+        image: Multizone,
       },
       {
         title: "Projection & Display Systems",
         description:
           "Laser projectors, LED walls, and large-format displays for auditoriums, control rooms, and exhibitions.",
-        image: AudioVisual,
+        image: DisplaySystem,
       },
       {
         title: "Video Matrix & Control Systems",
         description:
           "Route multiple video sources to multiple screens with centralized control—ideal for surveillance centers and large venues.",
-        image: AudioVisual,
+        image: VideoMatrix,
       },
       {
         title: "AV Automation & Integration",
         description:
           "Unified control of lighting, sound, and visuals via tablet, mobile, or voice—customized for each space.",
-        image: AudioVisual,
+        image: AVAutomation,
       },
     ],
     icon: (
@@ -289,6 +327,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={AudioVisual}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -304,25 +344,25 @@ export const servicesData = [
         title: "Dedicated On-site & Remote Support",
         description:
           "Dedicated on-site engineers combined with a responsive remote helpdesk to ensure fast issue resolution.",
-        image: ManagedIT,
+        image: DedicatedOnsite,
       },
       {
         title: "Proactive Monitoring & Maintenance",
         description:
           "Monthly diagnostics, system monitoring, and preventive maintenance to avoid downtime before it happens.",
-        image: ManagedIT,
+        image: EmergencyOnCall,
       },
       {
         title: "Emergency On-Call Support",
         description:
           "Rapid-response support for critical system failures and business-impacting issues.",
-        image: ManagedIT,
+        image: ProActive,
       },
       {
         title: "Strategic ICT Consulting",
         description:
           "IT audits, technology planning, and vendor coordination to align your IT strategy with business goals.",
-        image: ManagedIT,
+        image: Strategic,
       },
     ],
     icon: (
@@ -332,6 +372,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={ManagedIT}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -346,31 +388,31 @@ export const servicesData = [
         title: "Preventive Maintenance Visits",
         description:
           "Scheduled preventive maintenance to ensure optimal performance and reduce unexpected breakdowns.",
-        image: AMC,
+        image: Preventive,
       },
       {
         title: "24/7 Technical Support",
         description:
           "Round-the-clock technical assistance to resolve issues whenever they arise.",
-        image: AMC,
+        image: TwentyFourSeven,
       },
       {
         title: "Priority Service Response",
         description:
           "Faster response times and priority handling for AMC customers.",
-        image: AMC,
+        image: Priority,
       },
       {
         title: "On-site & Remote Troubleshooting",
         description:
           "Comprehensive troubleshooting support covering on-site and remote assistance.",
-        image: AMC,
+        image: OnSite,
       },
       {
         title: "Replacement of Faulty Parts",
         description:
           "Replacement of defective components as per contract terms to minimize downtime.",
-        image: AMC,
+        image: Replacement,
       },
     ],
     icon: (
@@ -380,6 +422,8 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={AMC}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
@@ -394,25 +438,19 @@ export const servicesData = [
         title: "Frontend Development",
         description:
           "Create responsive, fast, and interactive interfaces using React, Vue, or Angular, ensuring seamless user experiences across devices.",
-        image: Development,
+        image: Frontend,
       },
       {
         title: "Backend Development",
         description:
           "Design and implement secure, scalable, and high-performance server-side solutions using Node.js, Django, or Laravel.",
-        image: Development,
-      },
-      {
-        title: "E-commerce & CMS Solutions",
-        description:
-          "Develop customized e-commerce platforms and content management systems that are user-friendly, easy to manage, and optimized for sales and conversions.",
-        image: Development,
+        image: Backend,
       },
       {
         title: "Website Maintenance & Optimization",
         description:
           "Ensure websites remain up-to-date, secure, and fast with ongoing maintenance, performance optimization, and SEO best practices.",
-        image: Development,
+        image: Maintenence,
       },
     ],
     icon: (
@@ -422,11 +460,13 @@ export const servicesData = [
         className=" object-cover cursor-pointer active:scale-110 transition duration-400"
         src={Development}
         alt="Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },
   {
-    id: 10,
+    id: 9,
     title: "Digital Marketing Solutions",
     heading: "Data-driven strategies that grow your brand online",
     description:
@@ -436,25 +476,25 @@ export const servicesData = [
         title: "Search Engine Optimization (SEO)",
         description:
           "Improve search rankings and organic traffic with technical SEO, keyword strategy, on-page optimization, and performance tracking.",
-        image: DigitalMarketing,
+        image: SEO,
       },
       {
         title: "Social Media Marketing",
         description:
           "Build brand presence and audience engagement across platforms like Instagram, Facebook, LinkedIn, and X with targeted campaigns.",
-        image: DigitalMarketing,
+        image: SocialMedia,
       },
       {
         title: "Performance & Paid Advertising",
         description:
           "Run high-converting ad campaigns on Google, Meta, and other platforms with precise targeting, A/B testing, and ROI optimization.",
-        image: DigitalMarketing,
+        image: Paid,
       },
       {
         title: "Content & Email Marketing",
         description:
           "Create compelling content and automated email campaigns that nurture leads, retain customers, and drive consistent growth.",
-        image: DigitalMarketing,
+        image: Email,
       },
     ],
     icon: (
@@ -464,6 +504,8 @@ export const servicesData = [
         className="object-cover cursor-pointer active:scale-110 transition duration-400"
         src={DigitalMarketing}
         alt="Digital Marketing Services"
+        loading="lazy"
+        sizes="(max-width: 768px) 0px, 550px"
       />
     ),
   },

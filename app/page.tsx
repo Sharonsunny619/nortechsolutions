@@ -22,6 +22,8 @@ export default function Home() {
             fill
             className="object-cover opacity-10"
             priority
+            sizes="100vw"
+            quality={75}
           />
         </div>
          <div className="absolute inset-0 z-20 pointer-events-none">
