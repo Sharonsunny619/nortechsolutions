@@ -59,14 +59,14 @@ export const nav = [
     icon: <House className="min-[555px]:h-4 min-[555px]:w-4 h-6 w-6" />,
   },
   {
-    name: "Our Services",
-    href: "#ourservices",
-    icon: <Wrench className="min-[555px]:h-4 min-[555px]:w-4 h-6 w-6" />,
-  },
-  {
     name: "About Us",
     href: "#aboutus",
     icon: <UsersRound className="min-[555px]:h-4 min-[555px]:w-4 h-6 w-6" />,
+  },
+  {
+    name: "Our Services",
+    href: "#ourservices",
+    icon: <Wrench className="min-[555px]:h-4 min-[555px]:w-4 h-6 w-6" />,
   },
   {
     name: "Contact Us",

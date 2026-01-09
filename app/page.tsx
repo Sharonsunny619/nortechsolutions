@@ -37,7 +37,7 @@ export default function Home() {
           <NortechCanvas isBottom={true} />
         </div>
       </main>
-      {/* <AboutUs /> */}
+      <AboutUs />
       <MobileServices />
       <Services />
       <ContactUs />
