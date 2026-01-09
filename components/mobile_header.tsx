@@ -175,7 +175,7 @@ export function MobileNav() {
               key={item.name}
               href={item.href}
               onClick={() => setActive(item.name)}
-              className="relative flex-1 flex items-center justify-center px-1"
+              className="relative flex-1 flex items-center justify-center px-1 z-10"
             >
               <span
                 className={`flex gap-2 relative text-[15px] min-[670px]:text-[16px] font-medium transition-colors before:absolute before:left-1/2 before:bottom-0 before:h-[3px] before:-translate-x-1/2 before:rounded-full before:transition-all before:duration-300 ${

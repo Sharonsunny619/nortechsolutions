@@ -18,7 +18,8 @@ function MobileServices() {
 
   const getIconSrc = (icon: ReactElement): StaticImageData | null => {
     try {
-      const props = (icon as ReactElement<{ src?: string | StaticImageData }>)?.props;
+      const props = (icon as ReactElement<{ src?: string | StaticImageData }>)
+        ?.props;
       if (props && props.src) {
         return props.src as StaticImageData;
       }
@@ -39,10 +40,13 @@ function MobileServices() {
   };
 
   const handlePointClick = (serviceId: number, pointIndex: number) => {
-    if (selectedPoint?.serviceId === serviceId && selectedPoint?.pointIndex === pointIndex) {
-        setSelectedPoint(null);
+    if (
+      selectedPoint?.serviceId === serviceId &&
+      selectedPoint?.pointIndex === pointIndex
+    ) {
+      setSelectedPoint(null);
     } else {
-        setSelectedPoint({ serviceId, pointIndex });
+      setSelectedPoint({ serviceId, pointIndex });
     }
   };
 
@@ -114,46 +118,49 @@ function MobileServices() {
               {/* Expanded Content Container */}
               <div
                 className={`transition-all duration-[400ms] ease-in-out ${
-                  isExpanded ? "max-h-[5000px] opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+                  isExpanded
+                    ? "max-h-[5000px] opacity-100"
+                    : "max-h-0 opacity-0 overflow-hidden"
                 }`}
               >
                 {/* Expanded Service View */}
-                 <div>
-                 
-                  <div 
+                <div>
+                  <div
                     className="cursor-pointer"
                     onClick={() => handleServiceClick(service.id)}
                   >
                     <div className="w-full px-4 pt-4 relative">
-                        <div className="w-full relative overflow-hidden bg-gray-100 dark:bg-gray-700 rounded-xl min-[1050px]:w-[500px] min-[1050px]:h-[500px] min-[900px]:w-[450px] min-[900px]:h-[450px] min-[610px]:w-[400px] min-[610px]:h-[400px] min-[610px]:mx-auto">
-                            {(() => {
-                            const iconSrc = getIconSrc(service.icon as ReactElement);
-                            return iconSrc ? (
-                                <Image
-                                src={iconSrc}
-                                alt={service.title}
-                                width={0}
-                                height={0}
-                                sizes="100vw"
-                                className="w-full h-auto min-[610px]:h-full min-[610px]:w-full min-[610px]:object-contain object-contain"
-                                />
-                            ) : null;
-                            })()}
-                        </div>
+                      <div className="w-full relative overflow-hidden bg-gray-100 dark:bg-gray-700 rounded-xl min-[1050px]:w-[500px] min-[1050px]:h-[500px] min-[900px]:w-[450px] min-[900px]:h-[450px] min-[610px]:w-[400px] min-[610px]:h-[400px] min-[610px]:mx-auto">
+                        {(() => {
+                          const iconSrc = getIconSrc(
+                            service.icon as ReactElement
+                          );
+                          return iconSrc ? (
+                            <Image
+                              src={iconSrc}
+                              alt={service.title}
+                              width={0}
+                              height={0}
+                              sizes="100vw"
+                              className="w-full h-auto min-[610px]:h-full min-[610px]:w-full min-[610px]:object-contain object-contain"
+                            />
+                          ) : null;
+                        })()}
+                      </div>
                     </div>
-                    
+
                     <div className="px-4 pt-4">
-                        <h3 className="text-2xl font-bold mb-2 text-black dark:text-[#5fa8e6]">
-                            {service.title}
-                        </h3>
+                      <h3 className="text-2xl font-bold mb-2 text-black dark:text-[#5fa8e6]">
+                        {service.title}
+                      </h3>
 
-                        <h4 className="text-lg font-semibold mb-3 text-black dark:text-gray-200">
-                            {service.heading}
-                        </h4>
+                      <h4 className="text-lg font-semibold mb-3 text-black dark:text-gray-200">
+                        {service.heading}
+                      </h4>
 
-                        <p className="text-base text-black dark:text-gray-300 leading-relaxed mb-6">
-                            {service.description}
-                        </p>
+                      <p className="text-base text-black dark:text-gray-300 leading-relaxed mb-6">
+                        {service.description}
+                      </p>
                     </div>
                   </div>
 
@@ -161,56 +168,60 @@ function MobileServices() {
                     {/* Service Points */}
                     <div className="space-y-3">
                       {service.points.map((point, index) => {
-                         const isThisPointSelected = isPointSelected && selectedPoint.pointIndex === index;
-                         
-                         return (
-                        <div
-                          key={index}
-                          className={`rounded-lg border transition-all duration-1000 overflow-hidden hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] dark:hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] hover:border-blue-300 ${
-                            isThisPointSelected 
-                                ? "border-none dark:border-none bg-gray-50 dark:bg-gray-700/50" 
-                                : "border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
-                          }`}
-                        >
-                          {/* Point Header (Title) */}
-                          <div 
-                            className="px-3 pt-3 pb-1 font-medium text-gray-700 dark:text-gray-300 flex justify-between items-center cursor-pointer"
-                            onClick={(e) => {
-                                e.stopPropagation();
-                                handlePointClick(service.id, index);
-                            }}
-                          >
-                            <span>{point.title}</span>
-                             {/* Optional Chevron or indicator could go here */}
-                          </div>
+                        const isThisPointSelected =
+                          isPointSelected && selectedPoint.pointIndex === index;
 
-                          {/* Point Content (Accordion Body) */}
-                          <div 
-                            className={`transition-all duration-[400ms] ease-in-out ${
-                                isThisPointSelected ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                        return (
+                          <div
+                            key={index}
+                            className={`rounded-lg border transition-all duration-1000 overflow-hidden hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] dark:hover:shadow-[0_0_10px_rgba(59,130,246,0.5)] hover:border-blue-300 ${
+                              isThisPointSelected
+                                ? "border-none dark:border-none bg-gray-50 dark:bg-gray-700/50"
+                                : "border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 cursor-pointer"
                             }`}
                           >
-                            <div className="p-4 pt-0">
+                            {/* Point Header (Title) */}
+                            <div
+                              className="px-3 pt-3 pb-1 font-medium text-gray-700 dark:text-gray-300 flex justify-between items-center cursor-pointer"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handlePointClick(service.id, index);
+                              }}
+                            >
+                              <span>{point.title}</span>
+                              {/* Optional Chevron or indicator could go here */}
+                            </div>
+
+                            {/* Point Content (Accordion Body) */}
+                            <div
+                              className={`transition-all duration-[400ms] ease-in-out ${
+                                isThisPointSelected
+                                  ? "max-h-[1000px] opacity-100"
+                                  : "max-h-0 opacity-0"
+                              }`}
+                            >
+                              <div className="p-4 pt-0">
                                 {point.image && (
-                                <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-4 mt-2">
+                                  <div className="w-full h-[200px] relative rounded-lg overflow-hidden mb-4 mt-2">
                                     <Image
-                                    src={point.image}
-                                    alt={point.title}
-                                    fill
-                                    className="object-cover"
-                                    sizes="(max-width: 768px) 100vw, 400px"
+                                      src={point.image}
+                                      alt={point.title}
+                                      fill
+                                      className="object-cover"
+                                      sizes="(max-width: 768px) 100vw, 400px"
                                     />
-                                </div>
+                                  </div>
                                 )}
                                 <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                                {point.description}
+                                  {point.description}
                                 </p>
+                              </div>
                             </div>
                           </div>
-                        </div>
-                      )})}
+                        );
+                      })}
                     </div>
-                    
+
                     {/* Removed Close Button */}
                   </div>
                 </div>

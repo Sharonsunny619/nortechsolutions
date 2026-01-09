@@ -12,7 +12,7 @@ export default function AboutUs() {
   return (
     <section
       id="aboutus"
-      className={`flex flex-col items-center pt-10  w-full z-30 relative bg-[#f3f4f5] ${roboto.className}`}
+      className={`flex flex-col scroll-mt-20 items-center pt-10  w-full z-30 relative bg-[#f3f4f5] ${roboto.className}`}
     >
       <p className="text-5xl pb-10 text-[#0b4369] font-bold md:flex hidden">
         About <span className="text-[#494a4d] ml-2"> Us</span>

@@ -38,8 +38,10 @@ export default function Home() {
         </div>
       </main>
       <AboutUs />
-      <MobileServices />
-      <Services />
+      <div id="ourservices" className="scroll-mt-20">
+        <MobileServices />
+        <Services />
+      </div>
       <ContactUs />
       <Footer />
     </>
