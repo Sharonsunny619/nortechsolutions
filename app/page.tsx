@@ -3,9 +3,10 @@ import ContactUs from "@/components/contact_us";
 import Footer from "@/components/footer";
 import HomePage from "@/components/home";
 import Services from "@/components/services";
-import AboutUs from "@/components/about_us";
+ import AboutUs from "@/components/about_us";
 import Image from "next/image";
 import BGImage from "@/components/images/gel7.jpg";
+import MobileServices from "@/components/mobile_services";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         className="min-h-screen flex flex-col items-center justify-center p-6 min-[330px]:p-8 relative overflow-hidden"
       >
         {/* Background Image */}
-        <div className="fixed inset-0 mt-20 w-[400px] min-[400px]:w-full h-full z-20 pointer-events-none">
+        <div className="fixed inset-0 mt-20 w-full h-full z-20 pointer-events-none">
           <Image
             src={BGImage}
             alt="Background"
@@ -37,6 +38,7 @@ export default function Home() {
         </div>
       </main>
       {/* <AboutUs /> */}
+      <MobileServices />
       <Services />
       <ContactUs />
       <Footer />

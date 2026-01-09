@@ -248,7 +248,7 @@ export default function Services() {
   return (
     <section
       id="ourservices"
-      className={`w-full min-h-screen flex flex-col md:flex-row relative z-30 bg-[#f3f4f5] dark:bg-black  shadow-[10px_0px_30px_rgba(0,0,0,0.1)]
+      className={`hidden min-[1210px]:flex w-full min-h-screen flex-col md:flex-row relative z-30 bg-[#f3f4f5] dark:bg-black  shadow-[10px_0px_30px_rgba(0,0,0,0.1)]
         ${roboto.className}`}
     >
       {/* Fixed description element that follows cursor */}
