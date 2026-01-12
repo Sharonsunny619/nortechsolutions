@@ -14,18 +14,23 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nor-tech IT solutions",
+  title: "Nor-tech IT Solutions",
   description: "Smart, Logic, Simple Solutions",
+
+  // 🔴 REQUIRED
+  manifest: "/manifest.json",
+
   icons: {
     icon: [
+      { url: "/favicon.ico" }, // MUST be first
       { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
       { url: "/favicon.svg", type: "image/svg+xml" },
-      { url: "/favicon.ico", rel: "shortcut icon" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180" },
     ],
   },
+
   other: {
     "msapplication-config": "/browserconfig.xml",
     "msapplication-TileImage": "/icons/ms-icon-144x144.png",
@@ -38,14 +43,10 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         <SiteHeader />
         {children}
       </body>
