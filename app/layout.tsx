@@ -14,22 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nor-tech IT Solutions",
+  title: "NOR-Tech IT Solutions",
   description: "Smart, Logic, Simple Solutions",
 
   // 🔴 REQUIRED
   manifest: "/manifest.json",
 
-  icons: {
-    icon: [
-      { url: "/favicon.ico" }, // MUST be first
-      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
-    ],
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180" },
-    ],
-  },
+
 
   other: {
     "msapplication-config": "/browserconfig.xml",

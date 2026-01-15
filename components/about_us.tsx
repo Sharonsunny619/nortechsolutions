@@ -53,8 +53,8 @@ export default function AboutUs() {
             </div>
 
             <p className="text-gray-900 text-sm md:text-base leading-relaxed tracking-wide">
-              Back when we were in college, like most friends, we used to talk
-              about starting our own tech startup. At that time, it felt like
+              It all started during our college days, like most friends, we also talked 
+              about building our own tech startup. At that time, it felt like
               just another fun idea we joked about. But slowly, that idea turned
               into a dream—and today, it’s something we’re truly proud to have
               made real. Nortech isn’t just a company for us; it’s a place where
@@ -97,10 +97,13 @@ export default function AboutUs() {
           </div>
 
           <p className="text-gray-100 text-sm leading-relaxed tracking-wide opacity-90">
-            Back when we were in college, like most friends, we used to talk
-            about starting our own tech startup. At that time, it felt like just
+            It all started during our college days,like most friends, we also talked 
+            about building our own tech startup. At that time, it felt like just
             another fun idea we joked about. But slowly, that idea turned into a
             dream—and today, it’s something we’re truly proud to have made real.
+            Nortech isn’t just a company for us; it’s a place where
+            we put our heart into building great solutions and making sure our
+            users are genuinely happy with what we create.
           </p>
         </div>
 
